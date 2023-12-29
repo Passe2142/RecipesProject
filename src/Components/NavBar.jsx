@@ -1,9 +1,11 @@
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import {Row, Col, Button, Form} from 'react-bootstrap';
-
+import  '../Style/navStyle.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLeaf } from '@fortawesome/free-solid-svg-icons';
 function NavBar() {
     return (
-            <Navbar bg="light" expand="lg" fixed="top" >
+            <Navbar className="custom-navbar" expand="lg" fixed="top" >
                 <Container>
                     <Navbar.Brand href="#home">Green Habit</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -19,9 +21,7 @@ function NavBar() {
                         <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">
-                        Separated link
-                        </NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                     </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
@@ -35,7 +35,7 @@ function NavBar() {
                         />
                         </Col>
                         <Col xs="auto">
-                        <Button type="submit">Search</Button>
+                        <Button type="submit"> <FontAwesomeIcon icon={faLeaf} />Search</Button>
                         </Col>
                     </Row>
                     </Form>

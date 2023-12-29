@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+.custom-navbar {
+    background-color: #4CAF50; /* Natural green color */
+}
+
+.custom-navbar li,
+.custom-navbar a,
+.custom-navbar button {
+    font-family: "Cantata One", sans-serif;
+    font-size: 18px; /* Slightly smaller font size */
+    font-weight: 600; /* Adjusted font weight for emphasis */
+    color: #fff; /* White text for better contrast */
+    text-decoration: none;
+}
+
+.custom-navbar button {
+    background-color: transparent; /* Set the background to transparent */
+    border: none; /* Remove button border */
+    cursor: pointer;
+    position: relative;
+}
+
+.custom-navbar button i {
+    font-size: 24px; /* Adjust the size of the FontAwesome icon */
+    color: #fff; /* White color for the icon */
+}
+
+.custom-navbar button:before {
+    content: '\f06c'; /* Unicode for the leaf icon in FontAwesome */
+    font-family: 'Font Awesome Free 6'; /* Specify the FontAwesome font family */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.custom-navbar header {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    align-items: stretch;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 10px 20px;
+    row-gap: 10px;
+    column-gap: 20px;
+    padding: 20px; /* Add some padding for a more spacious look */
+}
