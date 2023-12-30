@@ -5,20 +5,26 @@ function NavBar() {
     return (
         <div className='navbar'>
             <div className="logo-container">
-                        <span className="logo-text">Green Habit</span>
+                <span className="logo-text">Green Habit</span>
             </div>
             <nav >
-                    <ul className='nav-link'>
-                        <li> <a href='#'>Recipes</a></li>
-                        <li> <a href='#'>Categories</a></li>
-                        <li> <a href='#'>Holidays</a></li>
-                        <li> <a href='#'>About Me</a></li>
-                    </ul>
+                <ul className='nav-link'>
+                    <li> <a href='#'>Recipes</a></li>
+                    <li> <a href='#'>Categories</a></li>
+                    <li> <a href='#'>Holidays</a></li>
+                    <li> <a href='#'>About Me</a></li>
+                </ul>
             </nav>
-            <input className='nav-input' type="text" placeholder='Search Recipes' />
-            <button className='nav-button' type="submit"> <FontAwesomeIcon icon={faLeaf} />Search</button>
+            <form>
+            <button className='nav-button' type="submit"> <FontAwesomeIcon icon={faLeaf} />Login</button>
+            <label htmlFor="userName">
+                    <input className='navbar-input' id='userName' type="text" placeholder='User Name' />
+                </label>
+                <label htmlFor="userPassword">
+                    <input className='navbar-input' id='userPassword' type="password" placeholder='Password' />
+                </label>
+            </form>
         </div>
-
             );
 }
 
