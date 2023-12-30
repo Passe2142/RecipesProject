@@ -1,5 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import PropTypes from 'prop-types';
+import  '../Style/style.css';
 function Layout({ header, mainContent, footer }) {    return (
     <Container>
         <Row>

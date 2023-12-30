@@ -1,0 +1,74 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Cantata+One&display=swap');
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #465902; /* Natural green color */
+    position: relative; /* Set the position to relative for absolute positioning */
+}
+
+.logo-text {
+    font-family: 'Bad Script'; 
+    font-size: 16px; /* Adjust the font size as needed */
+    color: #e7e3e2; /* Adjust the text color as needed */
+    letter-spacing: 2px; /* Adjust letter spacing as needed */
+}
+
+
+.nav-link {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.nav-link li {
+    margin-right: 20px;
+}
+
+.nav-link li:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+}
+
+.nav-link li a {
+    font-family: 'Bad Script';
+    text-decoration: none;
+    color:   #BFADA3;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link li a:hover {
+    color: #400C16;
+}
+
+.search-container {
+    position: absolute;
+    right: 10px;
+}
+.navbar-input {
+    border: none;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Add a border for better separation */
+}
+
+.nav-button {
+    font-family: 'Bad Script';
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #BFADA3;
+    background-color: #400C16;
+    padding: 5px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+.nav-button:hover {
+    background-color: #400C16;
+}
