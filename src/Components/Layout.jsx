@@ -1,19 +1,20 @@
-import { Container, Row, Col } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-import  '../Style/style.css';
-function Layout({ header, mainContent, footer }) {    return (
-    <Container>
-        <Row>
-            <Col>{header}</Col>
-            <Col></Col>
-        </Row>
-        <Row>
-            <Col></Col>
-            <Col>{mainContent}</Col>
-            <Col>{footer}</Col>
-        </Row>
-    </Container>
-);
+import '../Style/style.css';
+
+function Layout({ header, mainContent, footer }) {
+    return (
+    <div className="container">
+        <div className="row">
+        <div className="col">{header}</div>
+        </div>
+        <div className="row">
+        <div className="col main-content">{mainContent}</div>
+        </div>
+        <div className="row">
+        <div className="col">{footer}</div>
+        </div>
+    </div>
+    );
 }
 
 Layout.propTypes = {

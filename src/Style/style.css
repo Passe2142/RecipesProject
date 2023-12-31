@@ -1,5 +1,25 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Cantata+One&display=swap');
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.col {
+    flex: 1;
+}
+
+.main-content {
+    flex-grow: 2; /* Adjust this value to give more space to the main content */
+}
+
 .navbar {
     display: flex;
     justify-content: space-around;
@@ -64,9 +84,31 @@
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin: 5px;
+    margin: 3px;
 }
 
 .nav-button:hover {
     background-color: #400C16;
 }
+
+.recipe-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Add any additional styling based on your design needs */
+  }
+  
+  .recipe-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .recipe-details li {
+    margin-bottom: 8px;
+  }

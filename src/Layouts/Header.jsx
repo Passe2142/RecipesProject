@@ -1,10 +1,10 @@
 import  '../Style/style.css';
-import NavBar from '../Components/NavBar';
+import NavHeader from '../Components/NavHeader';
 
 function Header() {
     return (
     <div>
-        <NavBar />
+        <NavHeader />
     </div>
     );
 }

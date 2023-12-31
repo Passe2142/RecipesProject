@@ -1,17 +1,18 @@
-import { Link} from "react-router-dom";
 import PropTypes from 'prop-types';
 
 function Recipe (props) {
-    const { ingr, diet, health, cuisineType, mealType, dishType } = props;   
+    const { name, ingr, diet, health, cuisineType, mealType, dishType } = props;   
     return(
-        <div className="recipe-container">
-        <h2>Recipe Details</h2>
-        <ul>
+        <div className="recipe-card">
+        <ul className="recipe-details">
             <li>
-            <strong>Ingredients:</strong> {ingr}
+                <strong>Name:</strong> {name}
             </li>
             <li>
-            <strong>Diet:</strong> {diet}
+                <strong>Ingredients:</strong> {ingr}
+            </li>
+            <li>
+                <strong>Diet:</strong> {diet}
             </li>
             <li>
                 <strong>Health:</strong> {health}
@@ -25,14 +26,16 @@ function Recipe (props) {
             <li>
                 <strong>Dish Type:</strong> {dishType}
             </li>
-            </ul>
-            <Link to="/recipes">Back to Recipes</Link>
-        </div>
+        </ul>
+        {/* You can add a Link component if needed */}
+    </div>
     );
-
 }
 
+
+
 Recipe.propTypes = {
+    name: PropTypes.node.isRequired,
     ingr: PropTypes.node.isRequired,
     diet: PropTypes.node.isRequired,
     health: PropTypes.node.isRequired,

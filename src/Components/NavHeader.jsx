@@ -1,7 +1,7 @@
 import  '../Style/style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLeaf } from '@fortawesome/free-solid-svg-icons';
-function NavBar() {
+import { faLeaf, faRightToBracket } from '@fortawesome/free-solid-svg-icons';
+function NavHeader() {
     return (
         <div className='navbar'>
             <div className="logo-container">
@@ -16,16 +16,19 @@ function NavBar() {
                 </ul>
             </nav>
             <form>
-            <button className='nav-button' type="submit"> <FontAwesomeIcon icon={faLeaf} />Login</button>
-            <label htmlFor="userName">
-                    <input className='navbar-input' id='userName' type="text" placeholder='User Name' />
+                
+
+            <label htmlFor="userEmail">
+                    <input className='navbar-input' id='userEmail' type="email" placeholder='Email Address' />
                 </label>
                 <label htmlFor="userPassword">
                     <input className='navbar-input' id='userPassword' type="password" placeholder='Password' />
                 </label>
+                <button className='nav-button' type="submit"><FontAwesomeIcon icon={faRightToBracket} /> Login</button>
+                <button className='nav-button' type="submit"> <FontAwesomeIcon icon={faLeaf} /> Sign Up</button>
             </form>
         </div>
             );
 }
 
-export default NavBar;
+export default NavHeader;
