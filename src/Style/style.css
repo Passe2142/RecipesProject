@@ -33,7 +33,7 @@
 }
 
 .logo-text {
-    font-family: 'Bad Script'; 
+    font-family: 'Bad Script', 'Cantata One', sans-serif;
     font-size: 24px; 
     color: #e7e3e2; 
     letter-spacing: 2px; 
@@ -57,7 +57,7 @@
 }
 
 .nav-link li a {
-    font-family: 'Bad Script';
+    font-family: 'Bad Script', 'Cantata One', sans-serif;
     text-decoration: none;
     color:   #BFADA3;
     font-size: 18px;
@@ -78,7 +78,7 @@
 }
 
 .nav-button {
-    font-family: 'Bad Script';
+    font-family: 'Bad Script', 'Cantata One', sans-serif;
     font-size: 18px;
     font-weight: 500;
     text-decoration: none;
@@ -104,8 +104,8 @@
 }
 
 .plate {
-    height: 180px;
-    width: 180px;
+    height: 280px;
+    width: 280px;
     border: 2px solid #400C16;
     border-radius: 50%;
     padding: 16px;
@@ -119,7 +119,7 @@
 }
 
 .recipe-details {
-    font-family: 'Bad Script';
+    font-family: 'Bad Script', 'Cantata One', sans-serif;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -130,7 +130,7 @@
 }
 
 .plate-button {
-    font-family: 'Bad Script';
+    font-family: 'Bad Script', 'Cantata One', sans-serif;
     margin-top: 10px; 
     cursor: pointer;
 }
@@ -154,8 +154,9 @@
 
 
 .plate-image {
-    width: 180px;
-    height: 180px;
+    width: 280px;
+    height: 280px;
     z-index: -1;
     border-radius: 50%;
+    
 }
