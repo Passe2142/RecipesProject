@@ -12,8 +12,12 @@
     justify-content: center;
 }
 
-.col {
+.col-4 {
     flex: 1;
+}
+
+.col-12 {
+    flex: 3; /* Adjust the flex value for the main content */
 }
 
 .main-content {
@@ -93,27 +97,29 @@
 
 .plate-container {
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    text-align: center; /* Center text within the plate */
+    text-align: center; 
 }
 
 .plate {
     height: 180px;
     width: 180px;
-    border: 2px solid #400C16; /* Brown border color to simulate a plate */
+    border: 2px solid #400C16;
     border-radius: 50%;
     padding: 16px;
     margin: 16px;
-    background-color: #e7e3e2; /* Light gray background color for the plate */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-    transition: box-shadow 0.3s ease; /* Add a cursor transition effect */
+    background-color: #e7e3e2; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: box-shadow 0.3s ease; 
 }
 .plate:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Change shadow on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
 .recipe-details {
+    font-family: 'Bad Script';
     list-style: none;
     padding: 0;
     margin: 0;
@@ -123,8 +129,33 @@
     margin-bottom: 8px;
 }
 
-button {
-    margin-top: 10px; /* Adjust top margin for spacing */
+.plate-button {
+    font-family: 'Bad Script';
+    margin-top: 10px; 
     cursor: pointer;
-    /* Add any additional styling based on your design needs */
+}
+
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh; 
+}
+
+.header, .footer {
+    
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+
+.plate-image {
+    width: 180px;
+    height: 180px;
+    z-index: -1;
+    border-radius: 50%;
 }

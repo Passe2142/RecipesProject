@@ -1,20 +1,23 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import '../Style/style.css';
 function Recipe (props) {
-    const { id, name, diet, image} = props;   
+    const { id, name, diet, image, description} = props;   
     return(
     <div className="plate-container">
         <div className="plate">
-            <ul className="recipe-details">
+        <img src='Images/tartaAcelgaYEspinaca.png' className='plate-image' alt='imagen'/>
+
+        </div>
+        <ul className="recipe-details">
                 <li>
                     <strong>Name:</strong> {name}
                 </li>
                 <li>
-                    <strong>Diet:</strong> {diet}
+                    <strong>Description:</strong> {description}
                 </li>
             </ul>
-        </div>
-        <button>See details</button>
+        <button className='plate-button '>See details</button>
     </div>
         
     );
