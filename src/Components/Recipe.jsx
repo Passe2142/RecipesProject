@@ -1,34 +1,22 @@
 import PropTypes from 'prop-types';
-
+import { Link } from 'react-router-dom';
 function Recipe (props) {
-    const { name, ingr, diet, health, cuisineType, mealType, dishType } = props;   
+    const { id, name, diet, image} = props;   
     return(
-        <div className="recipe-card">
-        <ul className="recipe-details">
-            <li>
-                <strong>Name:</strong> {name}
-            </li>
-            <li>
-                <strong>Ingredients:</strong> {ingr}
-            </li>
-            <li>
-                <strong>Diet:</strong> {diet}
-            </li>
-            <li>
-                <strong>Health:</strong> {health}
-            </li>
-            <li>
-                <strong>Cuisine Type:</strong> {cuisineType}
-            </li>
-            <li>
-                <strong>Meal Type:</strong> {mealType}
-            </li>
-            <li>
-                <strong>Dish Type:</strong> {dishType}
-            </li>
-        </ul>
-        {/* You can add a Link component if needed */}
+    <div className="plate-container">
+        <div className="plate">
+            <ul className="recipe-details">
+                <li>
+                    <strong>Name:</strong> {name}
+                </li>
+                <li>
+                    <strong>Diet:</strong> {diet}
+                </li>
+            </ul>
+        </div>
+        <button>See details</button>
     </div>
+        
     );
 }
 

@@ -91,24 +91,40 @@
     background-color: #400C16;
 }
 
-.recipe-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
-    margin: 16px;
+.plate-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    /* Add any additional styling based on your design needs */
-  }
-  
-  .recipe-details {
+    align-items: center;
+    text-align: center; /* Center text within the plate */
+}
+
+.plate {
+    height: 180px;
+    width: 180px;
+    border: 2px solid #400C16; /* Brown border color to simulate a plate */
+    border-radius: 50%;
+    padding: 16px;
+    margin: 16px;
+    background-color: #e7e3e2; /* Light gray background color for the plate */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    transition: box-shadow 0.3s ease; /* Add a cursor transition effect */
+}
+.plate:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Change shadow on hover */
+}
+
+.recipe-details {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-  
-  .recipe-details li {
+}
+
+.recipe-details li {
     margin-bottom: 8px;
-  }
+}
+
+button {
+    margin-top: 10px; /* Adjust top margin for spacing */
+    cursor: pointer;
+    /* Add any additional styling based on your design needs */
+}
