@@ -1,6 +1,6 @@
 import  '../Style/style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLeaf, faRightToBracket } from '@fortawesome/free-solid-svg-icons';
+import { faUtensils, faUser } from '@fortawesome/free-solid-svg-icons';
 function NavHeader() {
     return (
         <div className='navbar'>
@@ -24,8 +24,9 @@ function NavHeader() {
                 <label htmlFor="userPassword">
                     <input className='navbar-input' id='userPassword' type="password" placeholder='Password' />
                 </label>
-                <button className='nav-button' type="submit"><FontAwesomeIcon icon={faRightToBracket} /> Login</button>
-                <button className='nav-button' type="submit"> <FontAwesomeIcon icon={faLeaf} /> Sign Up</button>
+                <button className='nav-user' type="submit"><FontAwesomeIcon icon={faUser} /> Login </button>
+                
+                <button className='nav-user' type="submit"> <FontAwesomeIcon icon={faUtensils} /> Sign Up </button>
             </form>
         </div>
             );

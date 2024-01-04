@@ -1,9 +1,20 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Cantata+One&display=swap');
 
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh; 
+}
+
 .container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh; 
 }
 
 .row {
@@ -71,28 +82,60 @@
 
 
 .navbar-input {
+    font-family: 'Cantata One', sans-serif;
+    margin: 4px;
     border: none;
     border-radius: 5px;
-    border: 1px solid #ccc; 
+    border: 1px solid #465902; 
     padding: 10px;
 }
 
-.nav-button {
+.nav-user {
     font-family: 'Bad Script', 'Cantata One', sans-serif;
+    text-align: center;
     font-size: 18px;
     font-weight: 500;
+    margin: 4px;
+    background-color: #334103;
     text-decoration: none;
     color: #BFADA3;
-    background-color: #400C16;
-    padding: 5px 25px;
-    border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin: 3px;
 }
 
-.nav-button:hover {
-    background-color: #400C16;
+.nav-user:hover {
+    color: #400C16;
+}
+
+.search-bar{
+    display: flex;
+    font-family: 'Bad Script', 'Cantata One', sans-serif;
+    text-decoration: none;
+    font-size: 28px;
+    width: 800px;
+    height: 40px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: box-shadow 0.3s ease; 
+
+}
+
+.search-button{
+    display: flex;
+    align-self: center;
+    align-items: center;
+    font-family: 'Bad Script', 'Cantata One', sans-serif;
+    text-decoration: none;
+    font-size: 28px;
+    height: 60px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: box-shadow 0.3s ease; 
+}
+.search-bar:hover, .search-button:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
 .plate-container {
@@ -133,19 +176,6 @@
     font-family: 'Bad Script', 'Cantata One', sans-serif;
     margin-top: 10px; 
     cursor: pointer;
-}
-
-
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 100vh; 
-}
-
-.header, .footer {
-    
 }
 
 .main-content {
