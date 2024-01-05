@@ -1,14 +1,6 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Cantata+One&display=swap');
 
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 100vh; 
-}
-
 .container {
     display: flex;
     flex-direction: column;
@@ -23,7 +15,7 @@
     justify-content: center;
 }
 
-.col-4 {
+.header-col {
     flex: 1;
 }
 
@@ -107,6 +99,13 @@
     color: #400C16;
 }
 
+.search-form {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    
+}
+
 .search-bar{
     display: flex;
     font-family: 'Bad Script', 'Cantata One', sans-serif;
@@ -119,24 +118,60 @@
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     transition: box-shadow 0.3s ease; 
+    
 
 }
 
-.search-button{
-    display: flex;
-    align-self: center;
-    align-items: center;
-    font-family: 'Bad Script', 'Cantata One', sans-serif;
-    text-decoration: none;
-    font-size: 28px;
-    height: 60px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    transition: box-shadow 0.3s ease; 
-}
 .search-bar:hover, .search-button:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
+
+.search-button {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    padding: 20px;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "Cantana One",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+}
+
+.search-button:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.search-button:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.search-button:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
 
 .plate-container {
     display: flex;
@@ -189,4 +224,38 @@
     z-index: -1;
     border-radius: 50%;
     
+}
+
+
+/* Media queries for responsiveness */
+@media (min-width: 576px) {
+    /* Small screens and above */
+    .row {
+        flex-wrap: wrap; /* Allow items to wrap to the next row */
+    }
+
+    .col-6 {
+        width: 48%; /* Two columns in a row for screens 576px and above */
+    }
+}
+
+@media (min-width: 768px) {
+    /* Medium screens and above */
+    .col-6 {
+        width: 31.33%; /* Three columns in a row for screens 768px and above */
+    }
+}
+
+@media (min-width: 992px) {
+    /* Large screens and above */
+    .col-6 {
+        width: 23.5%; /* Four columns in a row for screens 992px and above */
+    }
+}
+
+@media (min-width: 1200px) {
+    /* Extra-large screens and above */
+    .col-6 {
+        width: 19%; /* Five columns in a row for screens 1200px and above */
+    }
 }

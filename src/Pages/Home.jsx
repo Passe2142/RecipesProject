@@ -1,9 +1,7 @@
 import Recipe from '../Components/Recipe';
+import '../Style/style.css';
 function Home() {
     return (
-    <div className="recipe-container">
-    <h1>Recipes</h1>
-
     <div className="row">
         <div className="col-md-4">
             <Recipe name="..." ingr="..." diet="..." health="..." cuisineType="..." mealType="..." dishType="..." />
@@ -17,7 +15,6 @@ function Home() {
 
         {/* Add more col-md-4 elements as needed */}
         </div>
-    </div>
     );
 }
 

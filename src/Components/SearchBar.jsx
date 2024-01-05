@@ -1,10 +1,10 @@
 import '../Style/style.css';
 function SearchBar () {
     return(
-        <div className='row'>
+            <form action="" className='search-form'>
             <input className='search-bar' type="text" placeholder="Recipes..."></input>
             <button className='search-button'>Search!</button>
-        </div>
+            </form>
     )
 
 }

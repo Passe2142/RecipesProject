@@ -5,7 +5,7 @@ function Layout({ header, mainContent, footer }) {
     return (
 <div className="container">
     <div className="row">
-        <div className="col-4">{header}</div>
+        <div className="header-col">{header}</div>
     </div>
     <div className="row">
         <div className="col-12 main-content">{mainContent}</div>
