@@ -1,26 +1,36 @@
-/* eslint-disable react/prop-types */
-import {Form} from 'react-bootstrap'; 
+import PropTypes from 'prop-types';
+import { Controller } from 'react-hook-form';
 
-function Input ({label, type='text', name, register, placeholder, errors, children}){
+function Input({ label, type = 'text', name, placeholder, control, errors, children }) {
+    return (
+        <div>
+        <label htmlFor={name}>{label}</label>
+        <Controller
+            name={name}
+            control={control}
+            defaultValue=""
+            render={({ field }) => (
+            <>
+                <input {...field} type={type} className="input" placeholder={placeholder} />
+                {errors && errors[name]?.type === 'required' && (
+                <span className='input-text'>The field is obligatory.</span>
+                )}
+                {children && children}
+            </>
+            )}
+        />
+        </div>
+    );
+    }
 
-        
-    return(
-    <>
-    <Form.Group className="mb-3" controlId={name}>
-        <Form.Label className='input'>{label}</Form.Label>
-            <Form.Control 
-            type={type}
-            className="input"
-            placeholder={placeholder} 
-            {...register} 
-            />
-
-        {errors && errors[name]?.type === "required" && (
-        <Form.Text className="text-muted">El campo es obligatorio.</Form.Text>)}
-    {children && children}
-    </Form.Group>   
-    </>
-    )
-}
+Input.propTypes = {
+    label: PropTypes.node.isRequired,
+    type: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    placeholder: PropTypes.string.isRequired,
+    control: PropTypes.object.isRequired, // Pass the shared form control instance
+    errors: PropTypes.object.isRequired, // Assuming errors is an object
+    children: PropTypes.node,
+};
 
 export default Input;
