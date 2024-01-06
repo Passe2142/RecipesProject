@@ -14,9 +14,6 @@ div root
             div col-4
 
 
-Certainly! Here's an ASCII visualization of the provided layout structure:
-
-plaintext
 
 +------------------------+  
 |          root          |

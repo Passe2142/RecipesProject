@@ -1,0 +1,16 @@
+Color Pallet:
+
+#141C19 - Evergreen Forest
+#1C2624 - Deep Charcoal
+#BFADA3 - Dusty Rose
+#A2A637 - Olive Hues
+#8FBF26 - Lime Zest
+#D97C2B - Copper Blaze
+#F25D27 - Sunset Orange
+#03c203 - Fern Green 
+#558C03 - Meadow Green
+#F2B705 - Golden Glow
+#F29F05 - Pumpkin Spice
+#F24405 - Ember Red
+#730202 - Deep Crimson
+

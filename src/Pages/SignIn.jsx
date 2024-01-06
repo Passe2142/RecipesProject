@@ -1,22 +1,23 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
 import {Form} from 'react-bootstrap'; 
 import {useForm} from "react-hook-form"
 import './SignUp.css'
 import * as auth  from '../Services/authService'
-import { messageRegistry } from "../Utils/errorMessage";
-import AlertNavigation from "../Components/AlertNavigation";
 import ButtonWithLoading from "../Components/ButtonWithLoading";
 import Input from "../Components/Input";
+import AlertNavigation from "../Components/AlertNavigation";
+import { messageLogin } from '../Utils/errorMessage';
+import { useState } from 'react';
 
 
-function SignUp () {
-const{
+function SignIn ({setSignIn}) {
+    const{
         register,
         handleSubmit,
         formState: { errors} ,
     } = useForm( {mode:"onChange"})
 
-const [alert, setAlert] = useState({
+    const [alert, setAlert] = useState({
         variant:"",
         text:"",
         duration: 0,
@@ -29,49 +30,35 @@ const onSubmit = async (data) => {
     setLoading(true)
     try {
         console.log(data);
-        await auth.register(data);
+        const response = await auth.login(data);
+        console.log("🚀 ~ file: SignUp.jsx:17 ~ onSubmit ~ response:", response)
         setAlert(
-        {
-            variant: 'success',
-            text:'Usuario creado correctamente!',
-            duration: 2000,
-            link: "/SignIn"
-        });
+            {
+                variant: 'success',
+                text:`Ha ingresado correctamente, bienvenide ${response?.name}!`,
+                duration: 2000,
+                link: "/"
+            });
+        setSignIn(true)
         setLoading(false)
-    } 
-    catch (error) {
+
+    } catch (error) {
         console.log(error)
-        if (error.code==='auth/email-already-in-use'){
-            setAlert(
+        setAlert(
             {
             variant:'danger',
-            text: messageRegistry[error.code] || 'Ha ocurrido un error.',
+            text: messageLogin[error.code] || 'Ha ocurrido un error.',
             duration: 0,
-        }
-            )
-        }
+            }
+        )
         setLoading(false)
+
     }
 }
-
 
     return (
         <div>
             <Form onSubmit={handleSubmit(onSubmit)}>
-                <Input type="text"
-                label="Nombre"
-                placeholder="Ingrese su nombre"
-                register={{...register("nombre", {required: true})}} 
-                errors={errors} name="name"
-                />
-                
-                <Input type="text"
-                label="Apellido"
-                placeholder="Ingrese su apellido"
-                register={{...register("apellido")}} 
-                errors={errors} name="name"
-                />
-
                 <Input type="email"
                 label="Email"
                 placeholder="Ingrese su email"
@@ -97,15 +84,15 @@ const onSubmit = async (data) => {
                 </Input>
                 
                     <ButtonWithLoading type="submit" variant="primary" loading={loading}>
-                        Registrarse
+                        Ingresar
                     </ButtonWithLoading>
             </Form>
 
         <AlertNavigation {...alert}/>
-        
+
         </div>
         );
     }
 
 
-export default SignUp
+export default SignIn
