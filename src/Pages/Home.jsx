@@ -12,8 +12,6 @@ function Home() {
         <div className="col-md-4">
             <Recipe name="..." ingr="..." diet="..." health="..." cuisineType="..." mealType="..." dishType="..." />
         </div>
-
-        {/* Add more col-md-4 elements as needed */}
         </div>
     );
 }

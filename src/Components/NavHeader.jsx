@@ -1,33 +1,27 @@
 import  '../Style/style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUtensils, faUser } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 function NavHeader() {
     return (
             <div className='navbar'>
                 <div className="logo-container">
-                    <span className="logo-text">Green Habit</span>
+                    <Link to='/'><span className="logo-text">Green Habit</span></Link>
                 </div>
                 <nav >
                     <ul className='nav-link'>
-                        <li> <a href='#'>Recipes</a></li>
-                        <li> <a href='#'>Categories</a></li>
-                        <li> <a href='#'>Holidays</a></li>
-                        <li> <a href='#'>About Me</a></li>
+                        <li> <Link to='/'>Recipes</Link></li>
+                        <li> <Link to='/CategoriesPage'>Categories</Link></li>
+                        <li> <Link to='/HolidaysPage'> Holidays</Link></li>
+                        <li> <Link to='/AboutPage'> About Me </Link></li>
                     </ul>
                 </nav>
-                <form>
+                <div>
+                    <Link to='/SignIn' className='nav-user' type='submit'><FontAwesomeIcon icon={faUser} /> Sign In </Link>
+                    <Link to='/SignUp' className='nav-user' type='submit'> <FontAwesomeIcon icon={faUtensils} /> Sign Up </Link>
+                </div>
                     
 
-                <label htmlFor="userEmail">
-                        <input className='navbar-input' id='userEmail' type="email" placeholder='Email Address' />
-                    </label>
-                    <label htmlFor="userPassword">
-                        <input className='navbar-input' id='userPassword' type="password" placeholder='Password' />
-                    </label>
-                    <button className='nav-user' type="submit"><FontAwesomeIcon icon={faUser} /> Login </button>
-                    
-                    <button className='nav-user' type="submit"> <FontAwesomeIcon icon={faUtensils} /> Sign Up </button>
-                </form>
             </div>
             );
 }

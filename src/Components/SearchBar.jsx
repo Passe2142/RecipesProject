@@ -1,9 +1,18 @@
 import '../Style/style.css';
+import SearchInput from './SearchInput';
+import { useForm } from 'react-hook-form';
+
 function SearchBar () {
+    const { control, handleSubmit } = useForm();
+    const onSubmit = (data) => {
+        console.log(data);
+    };
     return(
-            <form action="" className='search-form'>
-            <input className='search-bar' type="text" placeholder="Healthy greens for happy plates..."></input>
+            <form onSubmit={handleSubmit(onSubmit)}className='search-form'>
+            <SearchInput className='search-bar' type="text" placeholder="Healthy greens for happy plates..." control={control}></SearchInput>
             <button className='search-button'>Search!</button>
+            <button className=''>Filter!</button>
+
             </form>
     )
 

@@ -8,7 +8,7 @@ function Layout({ header, mainContent, footer }) {
         <div className="header-col">{header}</div>
     </div>
     <div className="row">
-        <div className="col-12 main-content">{mainContent}</div>
+        <div className="">{mainContent}</div>
     </div>
     <div className="row">
         <div className="col-4">{footer}</div>

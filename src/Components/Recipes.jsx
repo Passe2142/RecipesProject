@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import {getRecipes} from "../Services/recipesServices";
 import Recipe from "./Recipe";
-
 function Recipes () {
     const [recipes, setRecipes] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -24,3 +23,5 @@ function Recipes () {
     ),
     [search]
 }
+
+export default Recipes

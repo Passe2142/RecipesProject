@@ -13,6 +13,7 @@ function Header({ includeSearchBar = true }) {
 
 
 Header.propTypes = {
-    includeSearchBar: PropTypes.bool,};
+    includeSearchBar: PropTypes.bool
+};
 
 export default Header;

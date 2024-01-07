@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Controller } from 'react-hook-form';
 
-function Input({ label, type = 'text', name, placeholder, control, errors, children }) {
+function Input({ label, type = 'text', name, className, placeholder, control, errors, children }) {
     return (
         <div>
         <label htmlFor={name}>{label}</label>
@@ -11,7 +11,7 @@ function Input({ label, type = 'text', name, placeholder, control, errors, child
             defaultValue=""
             render={({ field }) => (
             <>
-                <input {...field} type={type} className="input" placeholder={placeholder} />
+                <input {...field} type={type} className={`input ${className}`} placeholder={placeholder} />
                 {errors && errors[name]?.type === 'required' && (
                 <span className='input-text'>The field is obligatory.</span>
                 )}
@@ -27,6 +27,7 @@ Input.propTypes = {
     label: PropTypes.node.isRequired,
     type: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
+    className: PropTypes.string,
     placeholder: PropTypes.string.isRequired,
     control: PropTypes.object.isRequired, // Pass the shared form control instance
     errors: PropTypes.object.isRequired, // Assuming errors is an object
